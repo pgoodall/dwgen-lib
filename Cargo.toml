@@ -1,0 +1,12 @@
+[package]
+name = "dwgen-lib"
+version = "0.1.0"
+edition = "2024"
+authors = ["Pete Goodall <pete@digicratic.com"]
+description = "A library for generating Diceware-like passwords."
+license = "MIT"
+repository = "https://github.com/pgoodall/dwgen-lib"
+
+[dependencies]
+clap = { version = "4.6.1", features = ["derive"] }
+rand = "0.10.1"
