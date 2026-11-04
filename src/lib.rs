@@ -5,25 +5,10 @@
 //! arguments to be passed to set the required values for `Args`.
 
 use std::io::Error;
-use clap::Parser;
 
-
-/// All options passed are gathered in the Args struct
-/// # Example
-/// ```
-/// use clap::Parser;
-/// let args = Args::parse;
-/// ```
-#[derive(Parser, Debug)]
-#[command(version, about, long_about = None)]
-pub struct Args {
-    /// Name of local file
-    #[arg(short, long)]
+struct Config {
     file: String,
-
-    /// Number of words
-    #[arg(short, long)]
-    number: Option<u32>,
+    num: u8,
 }
 
 /// Pass your args to the `generate_password` function. 
@@ -35,7 +20,7 @@ pub struct Args {
 /// let password = generate_password(args);
 /// println!("Password: {}", password);
 /// ```
-pub fn generate_password(args: Args) -> Vec<String> {
+pub fn generate_password(args: Config) -> Vec<String> {
     use rand::rngs;
     use rand::seq::{IteratorRandom, SliceRandom};
 
