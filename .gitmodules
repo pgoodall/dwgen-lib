@@ -1,3 +1,4 @@
 [submodule ".devcontainer"]
 	path = .devcontainer
-	url = git@github.com:pgoodall/dwgen-lib.git
+	url = git@github.com:Digicratic/rust-devcontainer.git
+	branch = main
